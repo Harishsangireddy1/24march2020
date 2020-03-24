@@ -1,0 +1,91 @@
+package Asst_10progs;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class ContactDesc 
+{
+	private String name;
+    private String email;
+    private long mobile;
+    private String address;
+    private String []contacts;
+
+    Scanner sc = new Scanner(System.in);
+    
+    public void setName()
+    {
+        System.out.println("Enter a name: ");
+        name= sc.next();     
+    }
+     public String getName()
+     {
+
+        return name;
+     }
+     
+     public void setEmail()
+     {
+         System.out.println("Enter email: ");
+         email= sc.next();     
+     }
+      public String getEmail()
+      {
+
+         return email;
+      }
+
+      public void setMobile()
+      {
+          System.out.println("mobile num: ");
+          mobile=sc.nextLong();     
+      }
+       public long getMobile()
+       {
+
+          return mobile;
+       }
+
+       public void setAddress()
+       {
+           System.out.println("Add: ");
+           address= sc.next();     
+       }
+        public String getAddress()
+        {
+
+           return address;
+        }
+
+    public void displayInfo(){
+    	int n;
+    	System.out.println("Enter no. of contacts :");
+        n=sc.nextInt();
+        
+       int a[] = new int[n];
+      
+    	 for(int i=1;i<=n;i++)
+    	 {
+    		 setName();
+    		 setEmail();
+    		 setMobile();
+    		 setAddress();
+    	 
+    	
+        System.out.println("You entered name " + this.getName());
+        System.out.println("Email is " + this.getEmail());
+        System.out.println("mobile num " + this.getMobile());
+        System.out.println("Address is " + this.getAddress());
+    	 }
+    }
+    public static void main(String [] args) throws IOException {
+    	int n;
+    	
+        ContactDesc cd = new ContactDesc();
+        cd.displayInfo();
+        
+               System.out.println("After sort by mobile number in descending order:");
+       
+               	
+     }
+
+}
