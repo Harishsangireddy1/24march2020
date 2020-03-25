@@ -1,0 +1,87 @@
+package Asst_10progs;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class SeverityComplaint {
+
+	private String customer;
+    private String complaintText;
+    private String dateOfComplaint;
+    private int severity;
+    
+    Scanner sc = new Scanner(System.in);
+    
+    public void setCustomer()
+    {
+        System.out.println("Enter a customer name: ");
+        customer= sc.next();     
+    }
+     public String getCustomer()
+     {
+
+        return customer;
+     }
+     
+     public void setComplaintText()
+     {
+         System.out.println("Enter Complaint : ");
+         complaintText= sc.next();     
+     }
+      public String getComplaintText()
+      {
+
+         return complaintText;
+      }
+
+      public void setDateOfComplaint()
+      {
+          System.out.println("Please provide Date in(dd-MM-yyyy) ");
+          dateOfComplaint=sc.next();     
+      }
+       public String getDateOfComplaint()
+       {
+
+          return dateOfComplaint;
+       }
+
+       public void setSeverity()
+       {
+           System.out.println("Severity level 1  2   3 : ");
+           severity=sc.nextInt();     
+       }
+        public int getSeverity()
+        {
+
+           return severity;
+        }
+        public void displayInfo(){
+        	int n;
+        	System.out.println("Please provide the number of complaints to be registered :");
+            n=sc.nextInt();
+       	   	 
+           int a[] = new int[n];
+           for(int i=1;i<=n;i++)
+           {
+        		 setCustomer();
+        		 setComplaintText();
+        		 setDateOfComplaint();
+        		 setSeverity();
+            
+        	
+            System.out.println("Customer name " + this.getCustomer());
+            System.out.println("Compalint Text " + this.getComplaintText());
+            System.out.println("Date of Complaint " + this.getDateOfComplaint());
+            System.out.println("Severity " + this.getSeverity());
+           }
+        }
+        public static void main(String [] args) throws IOException 
+        {
+        	
+            SeverityComplaint  sc= new SeverityComplaint();
+            sc.displayInfo();
+            System.out.println("Complaint Details");
+            System.out.println("Customer:");      ONLY THIS STATEMENT NOT COMPLITED 
+
+        }
+}
